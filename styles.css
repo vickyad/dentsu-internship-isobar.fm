@@ -1,0 +1,171 @@
+:root {
+    --white: #fafafa;
+    --black: #121212;
+    --orange: #f04d22;
+    --dark-gray: #333333;
+    --medium-gray: #999999;
+    --light-gray: #efefef;
+}
+
+* {
+    margin: 0;
+    border: none;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background-color: var(--white);
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.top-header {
+    padding: 1.2rem 0.8rem;
+    background-color: var(--orange);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 70px;
+}
+
+.top-header .logo {
+    height: 1.25rem;
+}
+
+.search-bar-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+}
+
+.search-button, 
+#search-bar-input {
+    background-color: transparent;
+}
+
+.search-button img {
+    width: 1rem;
+    height: 1rem;
+}
+
+.bottom-header {
+    padding: 0 1rem 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 0.75rem;
+    color: var(--medium-gray);
+}
+
+.order-by-button img {
+    height: 2.1rem;
+    width: 2.1rem;
+}
+
+.order-by-options button.selected {
+    background-color: var(--orange);
+}
+
+.artists-list {
+    margin-top: -2.1rem;
+    padding: 0 1rem;
+}
+
+.artist-card {
+    display: flex;
+    background-color: transparent;
+    align-items: flex-end;
+    padding: 1rem;
+}
+
+.artist-card img {
+    max-width: 3.2rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.text-wrapper {
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.text-wrapper p {
+    color: var(--dark-gray);
+}
+
+.text-wrapper span {
+    color: var(--medium-gray);
+    font-size: 0.8rem;
+}
+
+.item-divider {
+    border-top: 1px solid var(--light-gray);
+}
+
+.bottom-header.opened-dialog,
+.bottom-header.show-search-results {
+    background-color: var(--light-gray);
+    justify-content: space-between;
+}
+
+.bottom-header #results-obtained {
+    display: none;
+}
+
+.bottom-header.opened-dialog #results-obtained,
+.bottom-header.show-search-results #results-obtained {
+    display: block;
+}
+
+.artists-list.opened-dialog,
+.artists-list.show-search-results {
+    margin-top: 0;
+}
+
+.order-by-options {
+    background-color: var(--medium-gray);
+    flex-direction: column;
+    width: 40%;
+    right: 1rem;
+    font-size: 0.8rem;
+    position: absolute;
+    display: none;
+}
+
+.order-by-options button {
+    background-color: transparent;
+    text-transform: uppercase;
+    text-align: right;
+    color: var(--white);
+    padding: 0.5rem 0.6rem;
+}
+
+.order-by-options.opened-dialog {
+    display: flex;
+}
+
+.no-results-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--medium-gray);
+    font-size: 1.6rem;
+    margin-top: 50%;
+}
+
+.no-results-search img {
+    width: 40vw;
+    margin-top: 2rem;
+}
